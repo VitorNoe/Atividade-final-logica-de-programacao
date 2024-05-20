@@ -20,7 +20,7 @@ void addTask(vector<Task>&tasks, int& nextld) {
     cin >> newTask.description;
     cout << "Data de vencimento (DD/MM/AAAA): ";
     cin >> newTask.dueDate;
-    cout << "Status da tarefa (Pendente, Em Progresso, Concluída): ";
+    cout << "Status da tarefa (Pendente, Em_Progresso, Concluída): ";
     cin >> newTask.status;
     tasks.push_back(newTask);
     cout << "Tarefa adicionada com sucesso!\n";
