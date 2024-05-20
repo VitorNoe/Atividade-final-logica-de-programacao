@@ -48,7 +48,7 @@ void editTask(vector<Task>& tasks) {
             cin >> task.description;
             cout << "Nova data de vencimento (DD/MM/AAAA): ";
             cin >> task.dueDate;
-            cout << "Novo status da tarefa (Pendente, Em Progresso, Concluída): ";
+            cout << "Novo status da tarefa (Pendente, Em_Progresso, Concluída): ";
             cin >> task.status;
             cout << "Tarefa editada com sucesso!\n";
             return;
