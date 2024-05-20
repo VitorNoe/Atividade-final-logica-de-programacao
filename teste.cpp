@@ -102,7 +102,7 @@ int main() {
             cout << "Saindo do programa...\n";
             break;
             default:
-            cout << "Opção inválida! Tente novament.\n";
+            cout << "Opção inválida! Tente novamente.\n";
         }
     } while (choice != '5');
 
