@@ -71,6 +71,44 @@ void removeTask(vector<Task>& tasks) {
     cout << "Tarefa não encontrada!\n";
 }
 
+void searchTask(const vector<Task>& tasks) {
+    string searchTitle;
+    cout << "Digite o título da tarefa que deseja buscar: ";
+    cin.ignore();
+    getline(cin, searchTitle);
+    bool found = false;
+    for (const Task& task : tasks) {
+        if (task.title == searchTitle) {
+             cout << "ID: " << task.id << "\n";
+             cout << "Título: " << task.title << "\n";
+             cout << "Descrição: " << task.description << "\n";
+             cout << "Data de Vencimento: " << task.dueDate << "\n";
+             cout << "Status: " << task.status << "\n\n";
+             found = true;
+        }
+    }
+    if (!found) {
+        cout << "Tarefa não encontrada!\n";
+    }
+}
+
+void filterTasks(const vector<Task>& tasks) {
+    string statusFilter;
+    cout << "Digite o status das tarefas que deseja filtrar (Pendente, Em_Progresso, Concluída): ";
+    cin.ignore();
+    getline(cin, statusFilter);
+    cout << "Tarefas com status \"" << statusFilter << "\":\n";
+    for (const Task& task : tasks) {
+        if (task.status == statusFilter) {
+            cout << "ID: " << task.id << "\n";
+            cout << "Título: " << task.title << "\n";
+            cout << "Descrição: " << task.description << "\n";
+            cout << "Data de Vencimento: " << task.dueDate << "\n";
+            cout << "Status: " << task.status << "\n\n";
+        }
+    }
+}
+
 int main() {
     vector<Task> tasks;
     int nextld = 1;
@@ -81,7 +119,9 @@ int main() {
         cout << "2. Visualizar Tarefas\n";
         cout << "3. Editar Tarefa\n";
         cout << "4. Remover Tarefa\n";
-        cout << "5. Sair\n";
+        cout << "5. Buscar Tarefa\n";
+        cout << "6. Filtrar Tarefas\n";
+        cout << "7. Sair\n";
         cout << "Escolher uma opção: ";
         cin >> choice;
 
@@ -99,12 +139,18 @@ int main() {
             removeTask(tasks);
             break;
             case '5':
+            searchTask(tasks);
+            break;
+            case '6':
+            filterTasks(tasks);
+            break;
+            case '7':
             cout << "Saindo do programa...\n";
             break;
             default:
             cout << "Opção inválida! Tente novamente.\n";
         }
-    } while (choice != '5');
+    } while (choice != '7');
 
     return 0;
 }
