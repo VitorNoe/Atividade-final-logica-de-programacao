@@ -1,6 +1,6 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include <iostream> // incluir o arquivo ao preprocessador do compilador.
+#include <string> // incluir armazenamento de cadeias de caracteres.
+#include <vector> // incluir elementos de um determinado tipo de linear.
 using namespace std;
 
 struct Task{   // struct: definem tipos de dados que agrupam variáveis sob um mesmo tipo de dado. // Void: retorno da função. // bool: variável com valores true e false.
