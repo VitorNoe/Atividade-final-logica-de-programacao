@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-struct Task{   // Definem tipos de dados que agrupam variáveis sob um mesmo tipo de dado.
+struct Task{   // struct: definem tipos de dados que agrupam variáveis sob um mesmo tipo de dado. // Void: retorno da função. // bool: variável com valores true e false.
     int id;
     string title;
     string description;
